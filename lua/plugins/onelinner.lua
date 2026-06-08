@@ -1,16 +1,4 @@
 return {
-  -- Lualine (statusline)
-  {
-    "nvim-lualine/lualine.nvim",
-    config = function()
-      require("lualine").setup({
-        options = {
-          theme = "tokyonight",
-        },
-      })
-    end,
-  },
-
   -- Highlight colors (hex/rgb preview)
   {
     "brenoprata10/nvim-highlight-colors",

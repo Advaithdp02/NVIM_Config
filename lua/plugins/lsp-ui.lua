@@ -10,8 +10,7 @@ return {
       -- 🔍 Preview definition
       vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek Definition" })
 
-      -- 🔍 Peek references
-      vim.keymap.set("n", "gr", "<cmd>Lspsaga peek_references<CR>", { desc = "Peek References" })
+      -- gr (references) intentionally omitted: handled by lsp.lua's LspAttach buffer-local mapping
     end,
   },
 }

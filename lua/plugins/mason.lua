@@ -16,6 +16,9 @@ return {
 					"pyright",
 					"lua_ls",
 					"ts_ls",
+					"gopls",
+					"cssls",
+					"jsonls",
 				},
 			})
 		end,
@@ -37,6 +40,9 @@ return {
 
 					-- Lua
 					"stylua",
+
+					-- Go
+					"gofumpt",
 				},
 			})
 		end,

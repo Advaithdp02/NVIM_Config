@@ -1,31 +1,5 @@
 return {
-	-- Mason (installer)
-	{
-		"williamboman/mason.nvim",
-		build = ":MasonUpdate",
-		config = function()
-			require("mason").setup()
-		end,
-	},
-
-	-- Mason LSP bridge
-	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "mason.nvim" },
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"pyright",
-					"ts_ls",
-					"lua_ls",
-					"cssls",
-					"jsonls",
-				},
-			})
-		end,
-	},
-
-	-- NEW LSP setup (no lspconfig require)
+	-- LSP setup
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -95,6 +69,22 @@ return {
 			vim.lsp.config("jsonls", {
 				capabilities = caps,
 			})
+			-- 🔹 Go
+			vim.lsp.config("gopls", {
+				capabilities = caps,
+				settings = {
+					gopls = {
+						gofumpt = true,
+						usePlaceholders = true,
+						completeUnimported = true,
+						staticcheck = true,
+						analyses = {
+							unusedparams = true,
+							shadow = true,
+						},
+					},
+				},
+			})
 
 			-- 🔥 Enable all
 			vim.lsp.enable("pyright")
@@ -102,6 +92,7 @@ return {
 			vim.lsp.enable("ts_ls")
 			vim.lsp.enable("cssls")
 			vim.lsp.enable("jsonls")
+			vim.lsp.enable("gopls")
 		end,
 	},
 }

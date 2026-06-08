@@ -12,12 +12,11 @@ return {
 					typescript = { "prettier" },
 					css = { "prettier" },
 					json = { "prettier" },
-
+					go = { "gofumpt" },
 					-- Lua
 					lua = { "stylua" },
 				},
 
-				-- ❌ Disable auto format (recommended)
 				format_on_save = false,
 			})
 
