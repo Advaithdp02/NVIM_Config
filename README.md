@@ -30,6 +30,7 @@ lua/
 | Format & Lint | [conform.nvim](https://github.com/stevearc/conform.nvim), [nvim-lint](https://github.com/mfussenegger/nvim-lint) |
 | Git | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim), [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) |
 | Navigation | [harpoon](https://github.com/ThePrimeagen/harpoon) (harpoon2) |
+| Jump/Search | [flash.nvim](https://github.com/folke/flash.nvim) |
 | Diagnostics | [trouble.nvim](https://github.com/folke/trouble.nvim) |
 | Autopairs | [nvim-autopairs](https://github.com/windwp/nvim-autopairs) |
 | Keymap Help | [which-key.nvim](https://github.com/folke/which-key.nvim) |
@@ -89,6 +90,16 @@ lua/
 | `n` | `<leader>hr` | Reset hunk |
 | `n` | `<leader>hp` | Preview hunk |
 | `n` | `<leader>gg` | Open LazyGit |
+
+### Flash
+
+| Mode | Key | Action |
+|------|-----|--------|
+| `n`, `x`, `o` | `s` | Flash jump |
+| `n`, `x`, `o` | `S` | Flash treesitter |
+| `o` | `r` | Remote flash |
+| `o`, `x` | `R` | Treesitter search |
+| `c` | `<C-S>` | Toggle flash search |
 
 ### Diagnostics
 

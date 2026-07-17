@@ -5,7 +5,9 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require("lspsaga").setup({})
+      require("lspsaga").setup({
+        lightbulb = { enable = false },
+      })
       
       -- 🔍 Preview definition
       vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek Definition" })
